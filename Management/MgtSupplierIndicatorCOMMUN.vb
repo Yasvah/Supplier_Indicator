@@ -71,6 +71,21 @@
             End Try
         End Get
     End Property
+    ''' <summary>
+    ''' Retourne la liste des Supplier avec leur sous catégorie
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property ListSupplier2 As System.Data.Linq.ISingleResult(Of P_SUPPLIER_LISTResult3)
+        Get
+            Try
+                Return BaseSupplierAssessment.P_SUPPLIER_LIST()
+            Catch ex As Exception
+                Throw ex
+            End Try
+        End Get
+    End Property
 #End Region
 #Region "constructeur"
     Private Shared _instance As New MgtSupplierIndicatorCOMMUN()

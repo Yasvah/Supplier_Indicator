@@ -192,4 +192,11 @@
       <Column Name="SSC_DESCRIPTION" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
     </ElementType>
   </Function>
+  <Function Name="COMMON.P_SUPPLIER_LIST" Method="P_SUPPLIER_LIST" AccessModifier="Internal">
+    <ElementType Name="P_SUPPLIER_LISTResult3">
+      <Column Name="SUP_ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SSC_ID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SUP_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>

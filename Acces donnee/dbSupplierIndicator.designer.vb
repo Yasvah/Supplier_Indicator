@@ -141,6 +141,12 @@ Partial Public Class dbSupplierIndicatorDataContext
 		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo))
 		Return CType(result.ReturnValue,ISingleResult(Of P_SUB_CATEGORY_LISTResult))
 	End Function
+	
+	<Global.System.Data.Linq.Mapping.FunctionAttribute(Name:="COMMON.P_SUPPLIER_LIST")>  _
+	Friend Function P_SUPPLIER_LIST() As ISingleResult(Of P_SUPPLIER_LISTResult3)
+		Dim result As IExecuteResult = Me.ExecuteMethodCall(Me, CType(MethodInfo.GetCurrentMethod,MethodInfo))
+		Return CType(result.ReturnValue,ISingleResult(Of P_SUPPLIER_LISTResult3))
+	End Function
 End Class
 
 <Global.System.Data.Linq.Mapping.TableAttribute(Name:="SERTA.T_SUP_ASSESSMENT_SUA")>  _
@@ -3096,6 +3102,56 @@ Partial Public Class P_SUB_CATEGORY_LISTResult
 		Set
 			If (String.Equals(Me._SSC_DESCRIPTION, value) = false) Then
 				Me._SSC_DESCRIPTION = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class P_SUPPLIER_LISTResult3
+	
+	Private _SUP_ID As Integer
+	
+	Private _SSC_ID As System.Nullable(Of Integer)
+	
+	Private _SUP_NAME As String
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUP_ID", DbType:="Int NOT NULL")>  _
+	Public Property SUP_ID() As Integer
+		Get
+			Return Me._SUP_ID
+		End Get
+		Set
+			If ((Me._SUP_ID = value)  _
+						= false) Then
+				Me._SUP_ID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SSC_ID", DbType:="Int")>  _
+	Public Property SSC_ID() As System.Nullable(Of Integer)
+		Get
+			Return Me._SSC_ID
+		End Get
+		Set
+			If (Me._SSC_ID.Equals(value) = false) Then
+				Me._SSC_ID = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUP_NAME", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	Public Property SUP_NAME() As String
+		Get
+			Return Me._SUP_NAME
+		End Get
+		Set
+			If (String.Equals(Me._SUP_NAME, value) = false) Then
+				Me._SUP_NAME = value
 			End If
 		End Set
 	End Property
