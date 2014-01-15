@@ -359,6 +359,65 @@
         End Get
     End Property
 #End Region
+    ''' <summary>
+    ''' Retourne le total qualité.
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property TotalQuality As Integer
+        Get
+            Dim tmpTotalQuality As Integer
+            tmpTotalQuality = Me.indicePPMPoint + Me.sinNBPoint + Me.actionPlanReactivityPoint + Me.customerClaimNBPoint + Me.bonus500PPMPoint
+            If tmpTotalQuality < 0 Then
+                Return 0
+            ElseIf tmpTotalQuality > 45 Then
+                Return 45
+            Else
+                Return tmpTotalQuality
+            End If
+        End Get
+    End Property
+    ''' <summary>
+    ''' Retourne le total logistique
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property TotalLogistic As Integer
+        Get
+            Dim tmpTotalLogistic As Integer
+            tmpTotalLogistic = Me.logisticRateTarget95Point + Me.deliveryDelaysLevelPoint + Me.deliveryQualityPoint + Me.flexibilityPoint
+            If tmpTotalLogistic < 0 Then
+                Return 0
+            ElseIf tmpTotalLogistic > 35 Then
+                Return 35
+            Else
+                Return tmpTotalLogistic
+            End If
+        End Get
+    End Property
+    ''' <summary>
+    ''' retourne le total de compétivité
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property TotalCompetitiveness As Integer
+        Get
+            Dim tmpTotalCompetitiveness As Integer
+            tmpTotalCompetitiveness = Me.improvmentPlanPoint + Me.businessRelationshipPoint + Me.financialSituationPoint + Me.offersReactivityPoint + Me.technicalAnswerQualityPoint + Me.isoCertificationPoint
+            If tmpTotalCompetitiveness < 0 Then
+                Return 0
+            ElseIf tmpTotalCompetitiveness > 20 Then
+                Return 20
+            Else
+                Return tmpTotalCompetitiveness
+            End If
+        End Get
+    End Property
+
+
 #Region "Constructeur"
 
     Public Sub New(idSupplier As Integer, quarter As String)
