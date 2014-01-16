@@ -320,21 +320,7 @@
     Private _totalPoint As Integer
     Public ReadOnly Property totalPoint() As Integer
         Get
-            _totalPoint = Me.indicePPMPoint + _
-                Me.sinNBPoint + _
-                Me.customerClaimNBPoint + _
-                Me.actionPlanReactivityPoint + _
-                Me.bonus500PPMPoint + _
-                Me.logisticRateTarget95Point + _
-                Me.flexibilityPoint + _
-                Me.deliveryDelaysLevelPoint + _
-                Me.deliveryQualityPoint + _
-                Me.improvmentPlanPoint + _
-                Me.businessRelationshipPoint + _
-                Me.financialSituationPoint + _
-                Me.offersReactivityPoint + _
-                Me.technicalAnswerQualityPoint + _
-                Me.isoCertificationPoint
+            _totalPoint = Me.TotalQuality + Me.TotalLogistic + Me.TotalCompetitiveness
             Return _totalPoint
         End Get
     End Property

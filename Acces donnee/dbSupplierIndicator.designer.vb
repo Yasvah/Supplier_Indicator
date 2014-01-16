@@ -2944,6 +2944,20 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 	
 	Private _DELAYS_UP_TO_10_DAYS_RATE As System.Nullable(Of Single)
 	
+	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	
 	Public Sub New()
 		MyBase.New
 	End Sub
@@ -3016,6 +3030,90 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 		Set
 			If (Me._DELAYS_UP_TO_10_DAYS_RATE.Equals(value) = false) Then
 				Me._DELAYS_UP_TO_10_DAYS_RATE = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
 			End If
 		End Set
 	End Property
@@ -3144,7 +3242,7 @@ Partial Public Class P_SUPPLIER_LISTResult3
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUP_NAME", DbType:="VarChar(50) NOT NULL", CanBeNull:=false)>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUP_NAME", DbType:="VarChar(50)")>  _
 	Public Property SUP_NAME() As String
 		Get
 			Return Me._SUP_NAME
