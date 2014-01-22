@@ -357,8 +357,8 @@
             tmpTotalQuality = Me.indicePPMPoint + Me.sinNBPoint + Me.actionPlanReactivityPoint + Me.customerClaimNBPoint + Me.bonus500PPMPoint
             If tmpTotalQuality < 0 Then
                 Return 0
-            ElseIf tmpTotalQuality > 45 Then
-                Return 45
+            ElseIf tmpTotalQuality > 55 Then 'Mis à 55 : Demande de Marc pour que le bonus de point puis se reporter sur le total.
+                Return 55
             Else
                 Return tmpTotalQuality
             End If

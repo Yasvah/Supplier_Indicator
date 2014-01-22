@@ -32,13 +32,13 @@
                         Dim LNC_COUNT = uneLigne.LNC_COUNT
                         Dim LOGISTIC_RATE = IIf(IsNothing(uneLigne.LOGISTIC_RATE), 0, uneLigne.LOGISTIC_RATE)
                         Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UP_TO_10_DAYS_RATE), 0, uneLigne.DELAYS_UP_TO_10_DAYS_RATE)
-                        Dim _order_horizon_percentage_0_to_2 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2)
-                        Dim _order_horizon_percentage_3_to_4 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4)
-                        Dim _order_horizon_percentage_5_to_6 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6)
-                        Dim _order_horizon_percentage_7_to_8 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_7_TO_8)
-                        Dim _order_horizon_percentage_9_to_10 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10)
-                        Dim _order_horizon_percentage_11_to_12 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12)
-                        Dim _order_horizon_percentage_greather_than_12 As Integer = CInt(uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12)
+                        Dim _order_horizon_percentage_0_to_2 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2))
+                        Dim _order_horizon_percentage_3_to_4 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4))
+                        Dim _order_horizon_percentage_5_to_6 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6))
+                        Dim _order_horizon_percentage_7_to_8 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_7_TO_8), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_7_TO_8))
+                        Dim _order_horizon_percentage_9_to_10 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10))
+                        Dim _order_horizon_percentage_11_to_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12))
+                        Dim _order_horizon_percentage_greather_than_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12))
                         _PrecalculedValue = New Precalculatedvalue(PPM, QNC_COUNT, CUSTOMER_CLAIN8COUNT, LNC_COUNT, LOGISTIC_RATE, DELAY_UP_TO_DAYS_RATE, _
                                                                    _order_horizon_percentage_0_to_2, _order_horizon_percentage_3_to_4, _order_horizon_percentage_5_to_6, _order_horizon_percentage_7_to_8, _
                                                                    _order_horizon_percentage_9_to_10, _order_horizon_percentage_11_to_12, _order_horizon_percentage_greather_than_12)
