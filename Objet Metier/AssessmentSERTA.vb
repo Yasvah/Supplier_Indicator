@@ -28,7 +28,7 @@
                     For Each uneLigne In db.P_Assessment_Values_SERTA(Me.idSupplier, Me.quarter)
                         Dim PPM = If(IsNothing(uneLigne.PPM), 0, uneLigne.PPM)
                         Dim QNC_COUNT = uneLigne.QNC_COUNT
-                        Dim CUSTOMER_CLAIN8COUNT = uneLigne.CUSTOMER_CLAIM_COUNT
+                        Dim CUSTOMER_CLAIN_COUNT = uneLigne.CUSTOMER_CLAIM_COUNT
                         Dim LNC_COUNT = uneLigne.LNC_COUNT
                         Dim LOGISTIC_RATE = IIf(IsNothing(uneLigne.LOGISTIC_RATE), 0, uneLigne.LOGISTIC_RATE)
                         Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UP_TO_10_DAYS_RATE), 0, uneLigne.DELAYS_UP_TO_10_DAYS_RATE)
@@ -39,9 +39,12 @@
                         Dim _order_horizon_percentage_9_to_10 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10))
                         Dim _order_horizon_percentage_11_to_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12))
                         Dim _order_horizon_percentage_greather_than_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12))
-                        _PrecalculedValue = New Precalculatedvalue(PPM, QNC_COUNT, CUSTOMER_CLAIN8COUNT, LNC_COUNT, LOGISTIC_RATE, DELAY_UP_TO_DAYS_RATE, _
+                        Dim _firm_order_resquest As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_REQUESTED), 0, uneLigne.ORDER_HORIZON_REQUESTED))
+                        Dim _firm_order_current As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_USUAL), 0, uneLigne.ORDER_HORIZON_USUAL))
+                        _PrecalculedValue = New Precalculatedvalue(PPM, QNC_COUNT, CUSTOMER_CLAIN_COUNT, LNC_COUNT, LOGISTIC_RATE, DELAY_UP_TO_DAYS_RATE, _
                                                                    _order_horizon_percentage_0_to_2, _order_horizon_percentage_3_to_4, _order_horizon_percentage_5_to_6, _order_horizon_percentage_7_to_8, _
-                                                                   _order_horizon_percentage_9_to_10, _order_horizon_percentage_11_to_12, _order_horizon_percentage_greather_than_12)
+                                                                   _order_horizon_percentage_9_to_10, _order_horizon_percentage_11_to_12, _order_horizon_percentage_greather_than_12, _
+                                                                   _firm_order_resquest, _firm_order_current)
                     Next
                 End If
                 Return _PrecalculedValue

@@ -403,6 +403,14 @@
         End Get
     End Property
 
+    Public ReadOnly Property FirmOrderValues As Integer
+        Get
+            Return
+        End Get
+    End Property
+
+
+
 
 #Region "Constructeur"
 

@@ -184,6 +184,8 @@
 	  <Column Name="ORDER_HORIZON_PERCENTAGE_9_TO_10" Type="System.Single" DbType="Real" CanBeNull="true" />
 	  <Column Name="ORDER_HORIZON_PERCENTAGE_11_TO_12" Type="System.Single" DbType="Real" CanBeNull="true" />
 	  <Column Name="ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12" Type="System.Single" DbType="Real" CanBeNull="true" />
+	  <Column Name="ORDER_HORIZON_USUAL" Type="System.Int32" DbType="Int" CanBeNull="true" />
+	  <Column Name="ORDER_HORIZON_REQUESTED" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
   <Function Name="COMMON.P_CATEGORY_LIST" Method="P_CATEGORY_LIST" AccessModifier="Internal">

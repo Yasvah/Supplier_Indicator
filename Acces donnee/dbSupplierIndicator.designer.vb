@@ -2958,6 +2958,10 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 	
 	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
 	
+	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Integer)
+	
+	Private _ORDER_HORIZON_REQUESTED As System.Nullable(Of Integer)
+	
 	Public Sub New()
 		MyBase.New
 	End Sub
@@ -3114,6 +3118,30 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 		Set
 			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
 				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_USUAL", DbType:="Int")>  _
+	Public Property ORDER_HORIZON_USUAL() As System.Nullable(Of Integer)
+		Get
+			Return Me._ORDER_HORIZON_USUAL
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_USUAL.Equals(value) = false) Then
+				Me._ORDER_HORIZON_USUAL = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_REQUESTED", DbType:="Int")>  _
+	Public Property ORDER_HORIZON_REQUESTED() As System.Nullable(Of Integer)
+		Get
+			Return Me._ORDER_HORIZON_REQUESTED
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_REQUESTED.Equals(value) = false) Then
+				Me._ORDER_HORIZON_REQUESTED = value
 			End If
 		End Set
 	End Property
