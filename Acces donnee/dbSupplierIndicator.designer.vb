@@ -1563,7 +1563,7 @@ Partial Friend Class SUP_ASSESSMENT_PNS
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_DETAIL", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_DETAIL", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_DETAIL() As String
 		Get
 			Return Me._SUA_COMMENT_DETAIL
@@ -1579,7 +1579,7 @@ Partial Friend Class SUP_ASSESSMENT_PNS
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_CLASSIFICATION", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_CLASSIFICATION", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_CLASSIFICATION() As String
 		Get
 			Return Me._SUA_COMMENT_CLASSIFICATION
@@ -1595,7 +1595,7 @@ Partial Friend Class SUP_ASSESSMENT_PNS
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_GLOBAL", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_GLOBAL", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_GLOBAL() As String
 		Get
 			Return Me._SUA_COMMENT_GLOBAL
@@ -2331,7 +2331,7 @@ Partial Friend Class SUP_ASSESSMENT_COMMUN
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_DETAIL", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_DETAIL", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_DETAIL() As String
 		Get
 			Return Me._SUA_COMMENT_DETAIL
@@ -2347,7 +2347,7 @@ Partial Friend Class SUP_ASSESSMENT_COMMUN
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_CLASSIFICATION", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_CLASSIFICATION", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_CLASSIFICATION() As String
 		Get
 			Return Me._SUA_COMMENT_CLASSIFICATION
@@ -2363,7 +2363,7 @@ Partial Friend Class SUP_ASSESSMENT_COMMUN
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_GLOBAL", DbType:="VarChar(MAX)")>  _
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_SUA_COMMENT_GLOBAL", DbType:="NVarChar(MAX)")>  _
 	Public Property SUA_COMMENT_GLOBAL() As String
 		Get
 			Return Me._SUA_COMMENT_GLOBAL
