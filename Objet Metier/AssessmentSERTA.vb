@@ -31,7 +31,7 @@
                         Dim CUSTOMER_CLAIN_COUNT = uneLigne.CUSTOMER_CLAIM_COUNT
                         Dim LNC_COUNT = uneLigne.LNC_COUNT
                         Dim LOGISTIC_RATE = IIf(IsNothing(uneLigne.LOGISTIC_RATE), 0, uneLigne.LOGISTIC_RATE)
-                        Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UP_TO_10_DAYS_RATE), 0, uneLigne.DELAYS_UP_TO_10_DAYS_RATE)
+                        Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UPPER_TO_X_DAYS_RATE), 0, uneLigne.DELAYS_UPPER_TO_X_DAYS_RATE)
                         Dim _order_horizon_percentage_0_to_2 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2))
                         Dim _order_horizon_percentage_3_to_4 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4))
                         Dim _order_horizon_percentage_5_to_6 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6))
@@ -51,6 +51,34 @@
             Catch ex As Exception
                 Throw ex
             End Try
+        End Get
+    End Property
+    ''' <summary>
+    ''' Calcule le nombre de point pour LogisticTarget avec la pénalité
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property logisticRateTarget95WithPenalty() As Integer
+        Get
+            Dim temp As Integer
+            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
+            temp = IIf(temp < 0, 0, temp)
+            Return temp * (1 + PrecalculedValue.FirmOrderPoint / 100)
+        End Get
+    End Property
+    ''' <summary>
+    ''' Calcule le nombre de point de pénality pour LogisticTarget
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property PenaltyPoint As Integer
+        Get
+            Dim temp As Integer
+            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
+            temp = IIf(temp < 0, 0, temp)
+            Return logisticRateTarget95WithPenalty - temp
         End Get
     End Property
 

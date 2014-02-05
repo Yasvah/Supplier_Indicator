@@ -124,7 +124,7 @@
             .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
             .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
             .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-            .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+            .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
             .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
             .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
             .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint
@@ -169,7 +169,7 @@
                 .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
                 .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
                 .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
                 .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
                 .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
                 .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint

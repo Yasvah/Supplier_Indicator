@@ -91,6 +91,28 @@
             Return _firm_order_current
         End Get
     End Property
+    ''' <summary>
+    ''' Calcule la diférence de semaine entre FirmOrderCurrent et FirmOrderResquest
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property FirmOrderValues As Integer
+        Get
+            Return Me.FIRM_ORDER_REQUEST - Me.FIRM_ORDER_CURRENT
+        End Get
+    End Property
+    ''' <summary>
+    ''' Calcule le pourcentage de malus
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property FirmOrderPoint As Integer
+        Get
+            Return Me.FirmOrderValues * 5
+        End Get
+    End Property
 
     Sub New(PPM As Double, QNC_COUNT As Integer, CUSTOMER_CLAIM_COUNT As Integer, LNC_COUNT As Double, LOGISTIC_RATE As Double, DELAYS_UP_TO_DAYS_RATE As Double, _
             ORDER_HORIZON_PERCENTAGE_0_TO_2 As Integer, ORDER_HORIZON_PERCENTAGE_3_TO_4 As Integer, ORDER_HORIZON_PERCENTAGE_5_TO_6 As Integer, ORDER_HORIZON_PERCENTAGE_7_TO_8 As Integer, _

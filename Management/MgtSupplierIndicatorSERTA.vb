@@ -130,7 +130,7 @@ Public Class MgtSupplierIndicatorSERTA
             .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
             .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
             .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-            .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+            .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
             .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
             .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
             .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint
@@ -176,7 +176,7 @@ Public Class MgtSupplierIndicatorSERTA
                 .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
                 .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
                 .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
                 .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
                 .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
                 .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint
@@ -200,6 +200,23 @@ Public Class MgtSupplierIndicatorSERTA
         Next
         BaseSupplierAssessment.SubmitChanges()
 
+    End Sub
+    ''' <summary>
+    ''' Supprimer les score dans la base de donnée
+    ''' </summary>
+    ''' <param name="Assessment"></param>
+    ''' <remarks></remarks>
+    Public Sub delete(Assessment As AssessmentSERTA)
+        If Not IsNothing(Assessment) Then
+            Dim SupprimerAssessment = From unAssessment In BaseSupplierAssessment.SUP_ASSESSMENT_SERTA
+                                                            Where unAssessment.SUA_ID = Assessment.id
+                                                            Select unAssessment
+
+            For Each unAssessment In SupprimerAssessment
+                BaseSupplierAssessment.SUP_ASSESSMENT_SERTA.DeleteOnSubmit(unAssessment)
+            Next
+            BaseSupplierAssessment.SubmitChanges()
+        End If
     End Sub
     ''' <summary>
     ''' Recherche un score dans la liste des scores

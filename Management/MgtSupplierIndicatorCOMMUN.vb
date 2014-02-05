@@ -180,7 +180,7 @@
                 .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
                 .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
                 .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+                .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
                 .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
                 .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
                 .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint
@@ -230,7 +230,7 @@
                     .SUA_ACTION_PLAN_REACTIVITY_POINT = Assessment.actionPlanReactivityPoint
                     .SUA_BONUS_500_PPM_POINT = Assessment.bonus500PPMPoint
                     .SUA_LOGISTIC_RATE_TARGET_95_VALUE = Assessment.logisticRateTarget95Value
-                    .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95Point
+                    .SUA_LOGISTIC_RATE_TARGET_95_POINT = Assessment.logisticRateTarget95WithPenalty
                     .SUA_FLEXIBILITY_POINT = Assessment.flexibilityPoint
                     .SUA_DELIVERY_DELAYS_LEVEL_VALUE = Assessment.deliveryDelaysLevelValue
                     .SUA_DELIVERY_DELAYS_LEVEL_POINT = Assessment.deliveryDelaysLevelPoint
@@ -298,5 +298,21 @@
             Throw ex
         End Try
     End Function
+    Public Sub delete(Assessment As AssessmentCOMMUN)
+        Try
+            If Not IsNothing(Assessment) Then
+                Dim SupprimerAssessment = From unAssessment In BaseSupplierAssessment.SUP_ASSESSMENT_COMMUN
+                                                                Where unAssessment.SUA_ID = Assessment.id
+                                                                Select unAssessment
+
+                For Each unAssessment In SupprimerAssessment
+                    BaseSupplierAssessment.SUP_ASSESSMENT_COMMUN.DeleteOnSubmit(unAssessment)
+                Next
+                BaseSupplierAssessment.SubmitChanges()
+            End If
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Sub
 #End Region
 End Class

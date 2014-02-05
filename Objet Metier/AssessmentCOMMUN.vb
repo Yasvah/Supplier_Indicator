@@ -36,12 +36,52 @@
                     Dim CUSTOMER_CLAIN8COUNT = uneLigne.CUSTOMER_CLAIM_COUNT_GROUP
                     Dim LNC_COUNT = uneLigne.LNC_COUNT_GROUP
                     Dim LOGISTIC_RATE = IIf(IsNothing(uneLigne.LOGISTIC_RATE_GROUP), 0, uneLigne.LOGISTIC_RATE_GROUP)
-                    Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UP_TO_10_DAYS_RATE_GROUP), 0, uneLigne.DELAYS_UP_TO_10_DAYS_RATE_GROUP)
-                    _PrecalculedValue = New Precalculatedvalue(PPM, QNC_COUNT, CUSTOMER_CLAIN8COUNT, LNC_COUNT, LOGISTIC_RATE, DELAY_UP_TO_DAYS_RATE, 0, 0, 0, 0, 0, 0, 0, 0, 0)
-                    'TODO: A modifier Pour Moving-Ahead 2014
+                    Dim DELAY_UP_TO_DAYS_RATE = IIf(IsNothing(uneLigne.DELAYS_UPPER_TO_X_DAYS_RATE_GROUP), 0, uneLigne.DELAYS_UPPER_TO_X_DAYS_RATE_GROUP)
+                    Dim _order_horizon_percentage_0_to_2 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_0_TO_2))
+                    Dim _order_horizon_percentage_3_to_4 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_3_TO_4))
+                    Dim _order_horizon_percentage_5_to_6 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_5_TO_6))
+                    Dim _order_horizon_percentage_7_to_8 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_7_TO_8), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_7_TO_8))
+                    Dim _order_horizon_percentage_9_to_10 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_9_TO_10))
+                    Dim _order_horizon_percentage_11_to_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_11_TO_12))
+                    Dim _order_horizon_percentage_greather_than_12 As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12), 0, uneLigne.ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12))
+                    Dim _firm_order_resquest As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_REQUESTED), 0, uneLigne.ORDER_HORIZON_REQUESTED))
+                    Dim _firm_order_current As Integer = CInt(IIf(IsNothing(uneLigne.ORDER_HORIZON_USUAL), 0, uneLigne.ORDER_HORIZON_USUAL))
+                    _PrecalculedValue = New Precalculatedvalue(PPM, QNC_COUNT, CUSTOMER_CLAIN8COUNT, LNC_COUNT, LOGISTIC_RATE, DELAY_UP_TO_DAYS_RATE, _
+                                                                   _order_horizon_percentage_0_to_2, _order_horizon_percentage_3_to_4, _order_horizon_percentage_5_to_6, _order_horizon_percentage_7_to_8, _
+                                                                   _order_horizon_percentage_9_to_10, _order_horizon_percentage_11_to_12, _order_horizon_percentage_greather_than_12, _
+                                                                   _firm_order_resquest, _firm_order_current)
                 Next
             End If
             Return _PrecalculedValue
+        End Get
+    End Property
+
+    ''' <summary>
+    ''' Calcule le nombre de point pour LogisticTarget avec la pénalité
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property logisticRateTarget95WithPenalty() As Integer
+        Get
+            Dim temp As Integer
+            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
+            temp = IIf(temp < 0, 0, temp)
+            Return temp * (1 + PrecalculedValue.FirmOrderPoint / 100)
+        End Get
+    End Property
+    ''' <summary>
+    ''' Calcule le nombre de point de pénality pour LogisticTarget
+    ''' </summary>
+    ''' <value></value>
+    ''' <returns></returns>
+    ''' <remarks></remarks>
+    Public ReadOnly Property PenaltyPoint As Integer
+        Get
+            Dim temp As Integer
+            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
+            temp = IIf(temp < 0, 0, temp)
+            Return logisticRateTarget95WithPenalty - temp
         End Get
     End Property
 End Class

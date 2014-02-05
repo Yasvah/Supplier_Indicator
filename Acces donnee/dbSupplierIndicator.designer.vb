@@ -52,7 +52,8 @@ Partial Public Class dbSupplierIndicatorDataContext
   #End Region
 	
 	Public Sub New()
-		MyBase.New(Global.Supplier_Indicator.My.MySettings.Default.SUPPLIER_INDICATORDevConnectionString, mappingSource)
+		MyBase.New("Data Source=W08R2-UPDATE\RYBACK;Initial Catalog=SUPPLIER_INDICATORDev;Integrated "& _ 
+				"Security=True", mappingSource)
 		OnCreated
 	End Sub
 	
@@ -2592,7 +2593,7 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	
 	Private _LOGISTIC_RATE_PNS As System.Nullable(Of Single)
 	
-	Private _DELAYS_UP_TO_10_DAYS_RATE_PNS As System.Nullable(Of Single)
+	Private _DELAYS_UPPER_TO_X_DAYS_RATE_PNS As System.Nullable(Of Single)
 	
 	Private _PPM_SERTA As System.Nullable(Of Single)
 	
@@ -2604,7 +2605,7 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	
 	Private _LOGISTIC_RATE_SERTA As System.Nullable(Of Single)
 	
-	Private _DELAYS_UP_TO_10_DAYS_RATE_SERTA As System.Nullable(Of Single)
+	Private _DELAYS_UPPER_TO_X_DAYS_RATE_SERTA As System.Nullable(Of Single)
 	
 	Private _PPM_GROUP As System.Nullable(Of Single)
 	
@@ -2616,7 +2617,25 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	
 	Private _LOGISTIC_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _DELAYS_UP_TO_10_DAYS_RATE_GROUP As System.Nullable(Of Single)
+	Private _DELAYS_UPPER_TO_X_DAYS_RATE_GROUP As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
+	
+	Private _ORDER_HORIZON_REQUESTED As System.Nullable(Of Byte)
 	
 	Public Sub New()
 		MyBase.New
@@ -2682,14 +2701,14 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UP_TO_10_DAYS_RATE_PNS", DbType:="Real")>  _
-	Public Property DELAYS_UP_TO_10_DAYS_RATE_PNS() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UPPER_TO_X_DAYS_RATE_PNS", DbType:="Real")>  _
+	Public Property DELAYS_UPPER_TO_X_DAYS_RATE_PNS() As System.Nullable(Of Single)
 		Get
-			Return Me._DELAYS_UP_TO_10_DAYS_RATE_PNS
+			Return Me._DELAYS_UPPER_TO_X_DAYS_RATE_PNS
 		End Get
 		Set
-			If (Me._DELAYS_UP_TO_10_DAYS_RATE_PNS.Equals(value) = false) Then
-				Me._DELAYS_UP_TO_10_DAYS_RATE_PNS = value
+			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE_PNS.Equals(value) = false) Then
+				Me._DELAYS_UPPER_TO_X_DAYS_RATE_PNS = value
 			End If
 		End Set
 	End Property
@@ -2754,14 +2773,14 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UP_TO_10_DAYS_RATE_SERTA", DbType:="Real")>  _
-	Public Property DELAYS_UP_TO_10_DAYS_RATE_SERTA() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UPPER_TO_X_DAYS_RATE_SERTA", DbType:="Real")>  _
+	Public Property DELAYS_UPPER_TO_X_DAYS_RATE_SERTA() As System.Nullable(Of Single)
 		Get
-			Return Me._DELAYS_UP_TO_10_DAYS_RATE_SERTA
+			Return Me._DELAYS_UPPER_TO_X_DAYS_RATE_SERTA
 		End Get
 		Set
-			If (Me._DELAYS_UP_TO_10_DAYS_RATE_SERTA.Equals(value) = false) Then
-				Me._DELAYS_UP_TO_10_DAYS_RATE_SERTA = value
+			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE_SERTA.Equals(value) = false) Then
+				Me._DELAYS_UPPER_TO_X_DAYS_RATE_SERTA = value
 			End If
 		End Set
 	End Property
@@ -2826,214 +2845,14 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UP_TO_10_DAYS_RATE_GROUP", DbType:="Real")>  _
-	Public Property DELAYS_UP_TO_10_DAYS_RATE_GROUP() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UPPER_TO_X_DAYS_RATE_GROUP", DbType:="Real")>  _
+	Public Property DELAYS_UPPER_TO_X_DAYS_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._DELAYS_UP_TO_10_DAYS_RATE_GROUP
+			Return Me._DELAYS_UPPER_TO_X_DAYS_RATE_GROUP
 		End Get
 		Set
-			If (Me._DELAYS_UP_TO_10_DAYS_RATE_GROUP.Equals(value) = false) Then
-				Me._DELAYS_UP_TO_10_DAYS_RATE_GROUP = value
-			End If
-		End Set
-	End Property
-End Class
-
-Partial Public Class P_ASSESSMENT_VALUESResult1
-	
-	Private _PPM As System.Nullable(Of Single)
-	
-	Private _QNC_COUNT As System.Nullable(Of Integer)
-	
-	Private _CUSTOMER_CLAIM_COUNT As System.Nullable(Of Integer)
-	
-	Private _LNC_COUNT As System.Nullable(Of Integer)
-	
-	Private _LOGISTIC_RATE As System.Nullable(Of Single)
-	
-	Private _DELAYS_UP_TO_10_DAYS_RATE As System.Nullable(Of Single)
-	
-	Public Sub New()
-		MyBase.New
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PPM", DbType:="Real")>  _
-	Public Property PPM() As System.Nullable(Of Single)
-		Get
-			Return Me._PPM
-		End Get
-		Set
-			If (Me._PPM.Equals(value) = false) Then
-				Me._PPM = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_QNC_COUNT", DbType:="Int")>  _
-	Public Property QNC_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._QNC_COUNT
-		End Get
-		Set
-			If (Me._QNC_COUNT.Equals(value) = false) Then
-				Me._QNC_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CUSTOMER_CLAIM_COUNT", DbType:="Int")>  _
-	Public Property CUSTOMER_CLAIM_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._CUSTOMER_CLAIM_COUNT
-		End Get
-		Set
-			If (Me._CUSTOMER_CLAIM_COUNT.Equals(value) = false) Then
-				Me._CUSTOMER_CLAIM_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LNC_COUNT", DbType:="Int")>  _
-	Public Property LNC_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._LNC_COUNT
-		End Get
-		Set
-			If (Me._LNC_COUNT.Equals(value) = false) Then
-				Me._LNC_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LOGISTIC_RATE", DbType:="Real")>  _
-	Public Property LOGISTIC_RATE() As System.Nullable(Of Single)
-		Get
-			Return Me._LOGISTIC_RATE
-		End Get
-		Set
-			If (Me._LOGISTIC_RATE.Equals(value) = false) Then
-				Me._LOGISTIC_RATE = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UP_TO_10_DAYS_RATE", DbType:="Real")>  _
-	Public Property DELAYS_UP_TO_10_DAYS_RATE() As System.Nullable(Of Single)
-		Get
-			Return Me._DELAYS_UP_TO_10_DAYS_RATE
-		End Get
-		Set
-			If (Me._DELAYS_UP_TO_10_DAYS_RATE.Equals(value) = false) Then
-				Me._DELAYS_UP_TO_10_DAYS_RATE = value
-			End If
-		End Set
-	End Property
-End Class
-
-Partial Public Class P_ASSESSMENT_VALUESResult2
-	
-	Private _PPM As System.Nullable(Of Single)
-	
-	Private _QNC_COUNT As System.Nullable(Of Integer)
-	
-	Private _CUSTOMER_CLAIM_COUNT As System.Nullable(Of Integer)
-	
-	Private _LNC_COUNT As System.Nullable(Of Integer)
-	
-	Private _LOGISTIC_RATE As System.Nullable(Of Single)
-	
-	Private _DELAYS_UP_TO_10_DAYS_RATE As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
-	
-	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Integer)
-	
-	Private _ORDER_HORIZON_REQUESTED As System.Nullable(Of Integer)
-	
-	Public Sub New()
-		MyBase.New
-	End Sub
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PPM", DbType:="Real")>  _
-	Public Property PPM() As System.Nullable(Of Single)
-		Get
-			Return Me._PPM
-		End Get
-		Set
-			If (Me._PPM.Equals(value) = false) Then
-				Me._PPM = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_QNC_COUNT", DbType:="Int")>  _
-	Public Property QNC_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._QNC_COUNT
-		End Get
-		Set
-			If (Me._QNC_COUNT.Equals(value) = false) Then
-				Me._QNC_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CUSTOMER_CLAIM_COUNT", DbType:="Int")>  _
-	Public Property CUSTOMER_CLAIM_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._CUSTOMER_CLAIM_COUNT
-		End Get
-		Set
-			If (Me._CUSTOMER_CLAIM_COUNT.Equals(value) = false) Then
-				Me._CUSTOMER_CLAIM_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LNC_COUNT", DbType:="Int")>  _
-	Public Property LNC_COUNT() As System.Nullable(Of Integer)
-		Get
-			Return Me._LNC_COUNT
-		End Get
-		Set
-			If (Me._LNC_COUNT.Equals(value) = false) Then
-				Me._LNC_COUNT = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LOGISTIC_RATE", DbType:="Real")>  _
-	Public Property LOGISTIC_RATE() As System.Nullable(Of Single)
-		Get
-			Return Me._LOGISTIC_RATE
-		End Get
-		Set
-			If (Me._LOGISTIC_RATE.Equals(value) = false) Then
-				Me._LOGISTIC_RATE = value
-			End If
-		End Set
-	End Property
-	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UP_TO_10_DAYS_RATE", DbType:="Real")>  _
-	Public Property DELAYS_UP_TO_10_DAYS_RATE() As System.Nullable(Of Single)
-		Get
-			Return Me._DELAYS_UP_TO_10_DAYS_RATE
-		End Get
-		Set
-			If (Me._DELAYS_UP_TO_10_DAYS_RATE.Equals(value) = false) Then
-				Me._DELAYS_UP_TO_10_DAYS_RATE = value
+			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE_GROUP.Equals(value) = false) Then
+				Me._DELAYS_UPPER_TO_X_DAYS_RATE_GROUP = value
 			End If
 		End Set
 	End Property
@@ -3122,8 +2941,8 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_USUAL", DbType:="Int")>  _
-	Public Property ORDER_HORIZON_USUAL() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_USUAL", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_USUAL() As System.Nullable(Of Byte)
 		Get
 			Return Me._ORDER_HORIZON_USUAL
 		End Get
@@ -3134,8 +2953,442 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_REQUESTED", DbType:="Int")>  _
-	Public Property ORDER_HORIZON_REQUESTED() As System.Nullable(Of Integer)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_REQUESTED", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_REQUESTED() As System.Nullable(Of Byte)
+		Get
+			Return Me._ORDER_HORIZON_REQUESTED
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_REQUESTED.Equals(value) = false) Then
+				Me._ORDER_HORIZON_REQUESTED = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class P_ASSESSMENT_VALUESResult1
+	
+	Private _PPM As System.Nullable(Of Single)
+	
+	Private _QNC_COUNT As System.Nullable(Of Integer)
+	
+	Private _CUSTOMER_CLAIM_COUNT As System.Nullable(Of Integer)
+	
+	Private _LNC_COUNT As System.Nullable(Of Integer)
+	
+	Private _LOGISTIC_RATE As System.Nullable(Of Single)
+	
+	Private _DELAYS_UPPER_TO_X_DAYS_RATE As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
+	
+	Private _ORDER_HORIZON_REQUESTED As System.Nullable(Of Byte)
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PPM", DbType:="Real")>  _
+	Public Property PPM() As System.Nullable(Of Single)
+		Get
+			Return Me._PPM
+		End Get
+		Set
+			If (Me._PPM.Equals(value) = false) Then
+				Me._PPM = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_QNC_COUNT", DbType:="Int")>  _
+	Public Property QNC_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._QNC_COUNT
+		End Get
+		Set
+			If (Me._QNC_COUNT.Equals(value) = false) Then
+				Me._QNC_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CUSTOMER_CLAIM_COUNT", DbType:="Int")>  _
+	Public Property CUSTOMER_CLAIM_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._CUSTOMER_CLAIM_COUNT
+		End Get
+		Set
+			If (Me._CUSTOMER_CLAIM_COUNT.Equals(value) = false) Then
+				Me._CUSTOMER_CLAIM_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LNC_COUNT", DbType:="Int")>  _
+	Public Property LNC_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._LNC_COUNT
+		End Get
+		Set
+			If (Me._LNC_COUNT.Equals(value) = false) Then
+				Me._LNC_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LOGISTIC_RATE", DbType:="Real")>  _
+	Public Property LOGISTIC_RATE() As System.Nullable(Of Single)
+		Get
+			Return Me._LOGISTIC_RATE
+		End Get
+		Set
+			If (Me._LOGISTIC_RATE.Equals(value) = false) Then
+				Me._LOGISTIC_RATE = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UPPER_TO_X_DAYS_RATE", DbType:="Real")>  _
+	Public Property DELAYS_UPPER_TO_X_DAYS_RATE() As System.Nullable(Of Single)
+		Get
+			Return Me._DELAYS_UPPER_TO_X_DAYS_RATE
+		End Get
+		Set
+			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE.Equals(value) = false) Then
+				Me._DELAYS_UPPER_TO_X_DAYS_RATE = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_USUAL", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_USUAL() As System.Nullable(Of Byte)
+		Get
+			Return Me._ORDER_HORIZON_USUAL
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_USUAL.Equals(value) = false) Then
+				Me._ORDER_HORIZON_USUAL = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_REQUESTED", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_REQUESTED() As System.Nullable(Of Byte)
+		Get
+			Return Me._ORDER_HORIZON_REQUESTED
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_REQUESTED.Equals(value) = false) Then
+				Me._ORDER_HORIZON_REQUESTED = value
+			End If
+		End Set
+	End Property
+End Class
+
+Partial Public Class P_ASSESSMENT_VALUESResult2
+	
+	Private _PPM As System.Nullable(Of Single)
+	
+	Private _QNC_COUNT As System.Nullable(Of Integer)
+	
+	Private _CUSTOMER_CLAIM_COUNT As System.Nullable(Of Integer)
+	
+	Private _LNC_COUNT As System.Nullable(Of Integer)
+	
+	Private _LOGISTIC_RATE As System.Nullable(Of Single)
+	
+	Private _DELAYS_UPPER_TO_X_DAYS_RATE As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
+	
+	Private _ORDER_HORIZON_REQUESTED As System.Nullable(Of Byte)
+	
+	Public Sub New()
+		MyBase.New
+	End Sub
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PPM", DbType:="Real")>  _
+	Public Property PPM() As System.Nullable(Of Single)
+		Get
+			Return Me._PPM
+		End Get
+		Set
+			If (Me._PPM.Equals(value) = false) Then
+				Me._PPM = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_QNC_COUNT", DbType:="Int")>  _
+	Public Property QNC_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._QNC_COUNT
+		End Get
+		Set
+			If (Me._QNC_COUNT.Equals(value) = false) Then
+				Me._QNC_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_CUSTOMER_CLAIM_COUNT", DbType:="Int")>  _
+	Public Property CUSTOMER_CLAIM_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._CUSTOMER_CLAIM_COUNT
+		End Get
+		Set
+			If (Me._CUSTOMER_CLAIM_COUNT.Equals(value) = false) Then
+				Me._CUSTOMER_CLAIM_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LNC_COUNT", DbType:="Int")>  _
+	Public Property LNC_COUNT() As System.Nullable(Of Integer)
+		Get
+			Return Me._LNC_COUNT
+		End Get
+		Set
+			If (Me._LNC_COUNT.Equals(value) = false) Then
+				Me._LNC_COUNT = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_LOGISTIC_RATE", DbType:="Real")>  _
+	Public Property LOGISTIC_RATE() As System.Nullable(Of Single)
+		Get
+			Return Me._LOGISTIC_RATE
+		End Get
+		Set
+			If (Me._LOGISTIC_RATE.Equals(value) = false) Then
+				Me._LOGISTIC_RATE = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_DELAYS_UPPER_TO_X_DAYS_RATE", DbType:="Real")>  _
+	Public Property DELAYS_UPPER_TO_X_DAYS_RATE() As System.Nullable(Of Single)
+		Get
+			Return Me._DELAYS_UPPER_TO_X_DAYS_RATE
+		End Get
+		Set
+			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE.Equals(value) = false) Then
+				Me._DELAYS_UPPER_TO_X_DAYS_RATE = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
+				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_USUAL", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_USUAL() As System.Nullable(Of Byte)
+		Get
+			Return Me._ORDER_HORIZON_USUAL
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_USUAL.Equals(value) = false) Then
+				Me._ORDER_HORIZON_USUAL = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_REQUESTED", DbType:="TinyInt")>  _
+	Public Property ORDER_HORIZON_REQUESTED() As System.Nullable(Of Byte)
 		Get
 			Return Me._ORDER_HORIZON_REQUESTED
 		End Get

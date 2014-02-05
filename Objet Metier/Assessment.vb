@@ -344,7 +344,6 @@
             Return "20" + quarter.ToString.Substring(0, 2) + " Trimestre " + quarter.ToString.Substring(2, 1)
         End Get
     End Property
-#End Region
     ''' <summary>
     ''' Retourne le total qualité.
     ''' </summary>
@@ -402,16 +401,7 @@
             End If
         End Get
     End Property
-
-    Public ReadOnly Property FirmOrderValues As Integer
-        Get
-            Return
-        End Get
-    End Property
-
-
-
-
+#End Region
 #Region "Constructeur"
 
     Public Sub New(idSupplier As Integer, quarter As String)
