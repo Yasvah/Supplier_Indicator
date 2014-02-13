@@ -2595,6 +2595,20 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	
 	Private _DELAYS_UPPER_TO_X_DAYS_RATE_PNS As System.Nullable(Of Single)
 	
+	Private _ORDER_HORIZON_0_TO_2_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_3_TO_4_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_5_TO_6_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_7_TO_8_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_9_TO_10_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_11_TO_12_RATE_PNS As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_GREATER_THAN_12_RATE_PNS As System.Nullable(Of Single)
+	
 	Private _PPM_SERTA As System.Nullable(Of Single)
 	
 	Private _QNC_COUNT_SERTA As System.Nullable(Of Integer)
@@ -2606,6 +2620,20 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	Private _LOGISTIC_RATE_SERTA As System.Nullable(Of Single)
 	
 	Private _DELAYS_UPPER_TO_X_DAYS_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_0_TO_2_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_3_TO_4_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_5_TO_6_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_7_TO_8_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_9_TO_10_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_11_TO_12_RATE_SERTA As System.Nullable(Of Single)
+	
+	Private _ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA As System.Nullable(Of Single)
 	
 	Private _PPM_GROUP As System.Nullable(Of Single)
 	
@@ -2619,19 +2647,19 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 	
 	Private _DELAYS_UPPER_TO_X_DAYS_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_0_TO_2_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_3_TO_4_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_5_TO_6_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_7_TO_8_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_9_TO_10_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_11_TO_12_RATE_GROUP As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP As System.Nullable(Of Single)
 	
 	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
 	
@@ -2713,6 +2741,90 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		End Set
 	End Property
 	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_0_TO_2_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_0_TO_2_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_0_TO_2_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_0_TO_2_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_0_TO_2_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_3_TO_4_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_3_TO_4_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_3_TO_4_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_3_TO_4_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_3_TO_4_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_5_TO_6_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_5_TO_6_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_5_TO_6_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_5_TO_6_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_5_TO_6_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_7_TO_8_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_7_TO_8_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_7_TO_8_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_7_TO_8_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_7_TO_8_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_9_TO_10_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_9_TO_10_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_9_TO_10_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_9_TO_10_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_9_TO_10_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_11_TO_12_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_11_TO_12_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_11_TO_12_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_11_TO_12_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_11_TO_12_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_GREATER_THAN_12_RATE_PNS", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_GREATER_THAN_12_RATE_PNS() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_GREATER_THAN_12_RATE_PNS
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_GREATER_THAN_12_RATE_PNS.Equals(value) = false) Then
+				Me._ORDER_HORIZON_GREATER_THAN_12_RATE_PNS = value
+			End If
+		End Set
+	End Property
+	
 	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_PPM_SERTA", DbType:="Real")>  _
 	Public Property PPM_SERTA() As System.Nullable(Of Single)
 		Get
@@ -2781,6 +2893,90 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		Set
 			If (Me._DELAYS_UPPER_TO_X_DAYS_RATE_SERTA.Equals(value) = false) Then
 				Me._DELAYS_UPPER_TO_X_DAYS_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_0_TO_2_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_0_TO_2_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_0_TO_2_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_0_TO_2_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_0_TO_2_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_3_TO_4_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_3_TO_4_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_3_TO_4_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_3_TO_4_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_3_TO_4_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_5_TO_6_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_5_TO_6_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_5_TO_6_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_5_TO_6_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_5_TO_6_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_7_TO_8_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_7_TO_8_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_7_TO_8_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_7_TO_8_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_7_TO_8_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_9_TO_10_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_9_TO_10_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_9_TO_10_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_9_TO_10_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_9_TO_10_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_11_TO_12_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_11_TO_12_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_11_TO_12_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_11_TO_12_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_11_TO_12_RATE_SERTA = value
+			End If
+		End Set
+	End Property
+	
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA() As System.Nullable(Of Single)
+		Get
+			Return Me._ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA
+		End Get
+		Set
+			If (Me._ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA.Equals(value) = false) Then
+				Me._ORDER_HORIZON_GREATER_THAN_12_RATE_SERTA = value
 			End If
 		End Set
 	End Property
@@ -2857,86 +3053,86 @@ Partial Public Class P_ASSESSMENT_VALUESResult
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_0_TO_2_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_0_TO_2_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+			Return Me._ORDER_HORIZON_0_TO_2_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			If (Me._ORDER_HORIZON_0_TO_2_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_0_TO_2_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_3_TO_4_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_3_TO_4_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+			Return Me._ORDER_HORIZON_3_TO_4_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			If (Me._ORDER_HORIZON_3_TO_4_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_3_TO_4_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_5_TO_6_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_5_TO_6_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+			Return Me._ORDER_HORIZON_5_TO_6_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			If (Me._ORDER_HORIZON_5_TO_6_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_5_TO_6_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_7_TO_8_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_7_TO_8_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+			Return Me._ORDER_HORIZON_7_TO_8_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			If (Me._ORDER_HORIZON_7_TO_8_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_7_TO_8_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_9_TO_10_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_9_TO_10_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+			Return Me._ORDER_HORIZON_9_TO_10_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			If (Me._ORDER_HORIZON_9_TO_10_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_9_TO_10_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_11_TO_12_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_11_TO_12_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+			Return Me._ORDER_HORIZON_11_TO_12_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			If (Me._ORDER_HORIZON_11_TO_12_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_11_TO_12_RATE_GROUP = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+			Return Me._ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			If (Me._ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP.Equals(value) = false) Then
+				Me._ORDER_HORIZON_GREATER_THAN_12_RATE_GROUP = value
 			End If
 		End Set
 	End Property
@@ -2980,19 +3176,19 @@ Partial Public Class P_ASSESSMENT_VALUESResult1
 	
 	Private _DELAYS_UPPER_TO_X_DAYS_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_0_TO_2_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_3_TO_4_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_5_TO_6_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_7_TO_8_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_9_TO_10_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_11_TO_12_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_GREATER_THAN_12_RATE As System.Nullable(Of Single)
 	
 	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
 	
@@ -3074,86 +3270,86 @@ Partial Public Class P_ASSESSMENT_VALUESResult1
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_0_TO_2_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_0_TO_2_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+			Return Me._ORDER_HORIZON_0_TO_2_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			If (Me._ORDER_HORIZON_0_TO_2_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_0_TO_2_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_3_TO_4_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_3_TO_4_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+			Return Me._ORDER_HORIZON_3_TO_4_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			If (Me._ORDER_HORIZON_3_TO_4_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_3_TO_4_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_5_TO_6_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_5_TO_6_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+			Return Me._ORDER_HORIZON_5_TO_6_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			If (Me._ORDER_HORIZON_5_TO_6_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_5_TO_6_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_7_TO_8_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_7_TO_8_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+			Return Me._ORDER_HORIZON_7_TO_8_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			If (Me._ORDER_HORIZON_7_TO_8_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_7_TO_8_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_9_TO_10_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_9_TO_10_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+			Return Me._ORDER_HORIZON_9_TO_10_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			If (Me._ORDER_HORIZON_9_TO_10_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_9_TO_10_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_11_TO_12_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_11_TO_12_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+			Return Me._ORDER_HORIZON_11_TO_12_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			If (Me._ORDER_HORIZON_11_TO_12_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_11_TO_12_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_GREATER_THAN_12_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_GREATER_THAN_12_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+			Return Me._ORDER_HORIZON_GREATER_THAN_12_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			If (Me._ORDER_HORIZON_GREATER_THAN_12_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_GREATER_THAN_12_RATE = value
 			End If
 		End Set
 	End Property
@@ -3197,19 +3393,19 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 	
 	Private _DELAYS_UPPER_TO_X_DAYS_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_0_TO_2 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_0_TO_2_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_3_TO_4 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_3_TO_4_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_5_TO_6 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_5_TO_6_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_7_TO_8 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_7_TO_8_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_9_TO_10 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_9_TO_10_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_11_TO_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_11_TO_12_RATE As System.Nullable(Of Single)
 	
-	Private _ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 As System.Nullable(Of Single)
+	Private _ORDER_HORIZON_GREATER_THAN_12_RATE As System.Nullable(Of Single)
 	
 	Private _ORDER_HORIZON_USUAL As System.Nullable(Of Byte)
 	
@@ -3291,86 +3487,86 @@ Partial Public Class P_ASSESSMENT_VALUESResult2
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_0_TO_2", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_0_TO_2() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_0_TO_2_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_0_TO_2_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_0_TO_2
+			Return Me._ORDER_HORIZON_0_TO_2_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_0_TO_2.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_0_TO_2 = value
+			If (Me._ORDER_HORIZON_0_TO_2_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_0_TO_2_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_3_TO_4", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_3_TO_4() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_3_TO_4_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_3_TO_4_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_3_TO_4
+			Return Me._ORDER_HORIZON_3_TO_4_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_3_TO_4.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_3_TO_4 = value
+			If (Me._ORDER_HORIZON_3_TO_4_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_3_TO_4_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_5_TO_6", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_5_TO_6() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_5_TO_6_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_5_TO_6_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_5_TO_6
+			Return Me._ORDER_HORIZON_5_TO_6_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_5_TO_6.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_5_TO_6 = value
+			If (Me._ORDER_HORIZON_5_TO_6_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_5_TO_6_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_7_TO_8", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_7_TO_8() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_7_TO_8_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_7_TO_8_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_7_TO_8
+			Return Me._ORDER_HORIZON_7_TO_8_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_7_TO_8.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_7_TO_8 = value
+			If (Me._ORDER_HORIZON_7_TO_8_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_7_TO_8_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_9_TO_10", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_9_TO_10() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_9_TO_10_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_9_TO_10_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_9_TO_10
+			Return Me._ORDER_HORIZON_9_TO_10_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_9_TO_10.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_9_TO_10 = value
+			If (Me._ORDER_HORIZON_9_TO_10_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_9_TO_10_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_11_TO_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_11_TO_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_11_TO_12_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_11_TO_12_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_11_TO_12
+			Return Me._ORDER_HORIZON_11_TO_12_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_11_TO_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_11_TO_12 = value
+			If (Me._ORDER_HORIZON_11_TO_12_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_11_TO_12_RATE = value
 			End If
 		End Set
 	End Property
 	
-	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12", DbType:="Real")>  _
-	Public Property ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12() As System.Nullable(Of Single)
+	<Global.System.Data.Linq.Mapping.ColumnAttribute(Storage:="_ORDER_HORIZON_GREATER_THAN_12_RATE", DbType:="Real")>  _
+	Public Property ORDER_HORIZON_GREATER_THAN_12_RATE() As System.Nullable(Of Single)
 		Get
-			Return Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12
+			Return Me._ORDER_HORIZON_GREATER_THAN_12_RATE
 		End Get
 		Set
-			If (Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12.Equals(value) = false) Then
-				Me._ORDER_HORIZON_PERCENTAGE_GREATER_THAN_12 = value
+			If (Me._ORDER_HORIZON_GREATER_THAN_12_RATE.Equals(value) = false) Then
+				Me._ORDER_HORIZON_GREATER_THAN_12_RATE = value
 			End If
 		End Set
 	End Property
