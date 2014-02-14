@@ -412,6 +412,8 @@
 
 
 
+
+
 #Region "Constructeur"
 
     Public Sub New(idSupplier As Integer, quarter As String)
