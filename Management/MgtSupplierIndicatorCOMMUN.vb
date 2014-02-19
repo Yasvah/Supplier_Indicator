@@ -203,6 +203,7 @@
             End With
             BaseSupplierAssessment.SUP_ASSESSMENT_COMMUN.InsertOnSubmit(nouveauAssessment)
             BaseSupplierAssessment.SubmitChanges()
+            System.Diagnostics.Trace.WriteLine(Now + " | " + " Assessement INSERT : " + Assessment.ToString, Me.ToString)
         Catch ex As Exception
             Throw ex
         End Try
@@ -253,6 +254,7 @@
                 End With
             Next
             BaseSupplierAssessment.SubmitChanges()
+            System.Diagnostics.Trace.WriteLine(Now + " | " + " Assessement UPDATE : " + Assessment.ToString, Me.ToString)
         Catch ex As Exception
             Throw ex
         End Try
@@ -298,6 +300,11 @@
             Throw ex
         End Try
     End Function
+    ''' <summary>
+    ''' Supprimer un assessment
+    ''' </summary>
+    ''' <param name="Assessment">Assessment à supprimer</param>
+    ''' <remarks></remarks>
     Public Sub delete(Assessment As AssessmentCOMMUN)
         Try
             If Not IsNothing(Assessment) Then
@@ -309,6 +316,7 @@
                     BaseSupplierAssessment.SUP_ASSESSMENT_COMMUN.DeleteOnSubmit(unAssessment)
                 Next
                 BaseSupplierAssessment.SubmitChanges()
+                System.Diagnostics.Trace.WriteLine(Now + " | " + " Assessement DELETE : " + Assessment.ToString, Me.ToString)
             End If
         Catch ex As Exception
             Throw ex
