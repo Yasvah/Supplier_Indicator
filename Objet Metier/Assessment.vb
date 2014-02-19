@@ -403,17 +403,6 @@
         End Get
     End Property
 
-    Public ReadOnly Property FirmOrderValues As Integer
-        Get
-            Return
-        End Get
-    End Property
-
-
-
-
-
-
 #Region "Constructeur"
 
     Public Sub New(idSupplier As Integer, quarter As String)
