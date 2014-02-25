@@ -63,13 +63,19 @@
     ''' </summary>
     ''' <value></value>
     ''' <returns></returns>
-    ''' <remarks></remarks>
+    ''' <remarks>
+    ''' X = logisticRateTarget95Value
+    ''' Y = (1 + PrecalculedValue.FirmOrderPoint / 100)
+    ''' Z = logisticRateTarget95WithPenalty
+    ''' 
+    ''' Z =(5X(1-Y)) / 9
+    ''' </remarks>
     Public ReadOnly Property logisticRateTarget95WithPenalty() As Integer
         Get
             Dim temp As Integer
-            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
+            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * (1 - PrecalculedValue.FirmOrderPoint / 100) * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
             temp = IIf(temp < 0, 0, temp)
-            Return temp * (1 + PrecalculedValue.FirmOrderPoint / 100)
+            Return temp
         End Get
     End Property
     ''' <summary>
@@ -77,13 +83,16 @@
     ''' </summary>
     ''' <value></value>
     ''' <returns></returns>
-    ''' <remarks></remarks>
+    ''' <remarks>
+    ''' X = logisticRateTarget95Value
+    ''' Y = (PrecalculedValue.FirmOrderPoint / 100)
+    ''' Z = PenaltyPoint
+    ''' 
+    ''' Z = 5XY/9
+    ''' </remarks>
     Public ReadOnly Property PenaltyPoint As Integer
         Get
-            Dim temp As Integer
-            temp = IIf(logisticRateTarget95Value >= 95, 25, logisticRateTarget95Value * 5 / 9 - 250 / 9) '95% -> 25 pts, 50% -> 0 pt
-            temp = IIf(temp < 0, 0, temp)
-            Return logisticRateTarget95WithPenalty - temp
+            Return (5 * logisticRateTarget95Value * (PrecalculedValue.FirmOrderPoint / 100)) / 9 * -1 'Pour avoir un chiffre négatif
         End Get
     End Property
 End Class
